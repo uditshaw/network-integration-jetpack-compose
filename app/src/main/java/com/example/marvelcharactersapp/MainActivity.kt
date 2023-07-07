@@ -27,6 +27,7 @@ import com.example.marvelcharactersapp.view.CollectionsBottomNav
 import com.example.marvelcharactersapp.view.CollectionsScreen
 import com.example.marvelcharactersapp.view.LibraryScreen
 import com.google.gson.internal.GsonBuildConfig
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 sealed class Destination(val route: String) {
@@ -37,6 +38,7 @@ sealed class Destination(val route: String) {
     }
 }
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
